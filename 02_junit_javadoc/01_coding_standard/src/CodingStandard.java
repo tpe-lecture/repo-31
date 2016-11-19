@@ -1,7 +1,7 @@
-/**
- * Klasse dient als Beispiel für den Coding-Standard und die Namenskonventionen
- * bei Java-Programmen.
- */
+    /**
+    * Klasse dient als Beispiel für den Coding-Standard und die Namenskonventionen
+    * bei Java-Programmen.
+    */
     public class CodingStandard {
         /* Konstante, die dem Rest der Welt etwas mitteilen soll.
         */
