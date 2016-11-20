@@ -18,9 +18,12 @@ public class ComplexNumberTest {
         // (4 + -5i) + 3         = (7 + -5i)        
         ComplexNumber a = new ComplexNumber(4, -5);
         ComplexNumber b = new ComplexNumber(2, 11);
-
+System.out.println(new ComplexNumber(6, 6));
+System.out.println(a.add(b));
         assertEquals(new ComplexNumber(6, 6), a.add(b));
         assertEquals(new ComplexNumber(7, -5), a.add(3));
+        System.out.println(new ComplexNumber(7, -5));
+        System.out.println(a.add(3));
     }
     
     /**
@@ -31,8 +34,13 @@ public class ComplexNumberTest {
         // Durchzuführende Tests:
         // (4 + -5i) - (2 + 11i) = ( 2 + -16i)
         // (2 + 11i) - (4 + -5i) = (-2 +  16i)
-
-        // TODO: Test schreiben
+        ComplexNumber a= new ComplexNumber(4,-5);
+        ComplexNumber b= new ComplexNumber(2,11);
+        
+        assertEquals(new ComplexNumber(2,-16), a.subtract(b));
+        assertEquals(new ComplexNumber (-2,16), b.subtract(a));
+        
+        
     }
 
     /**
