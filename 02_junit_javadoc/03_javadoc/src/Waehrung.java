@@ -1,16 +1,28 @@
-// TODO: JavaDoc
+/*
+ * Stellt eine Waehrung da
+ * @autor Dario Capuana
+ * 
+ */
 public class Waehrung {
 
-    // TODO: JavaDoc
+    /*
+     * Aktueller Wechselkurs der Waehrung als Integer
+     */
     private final int kurs;
 
-    // TODO: JavaDoc
+    /*
+     * Name der Währung als String
+     */
     private final String name;
 
-    // TODO: JavaDoc
+    /*
+     * Abkuerzung der Währung als String
+     */
     private final String kuerzel;
 
-    // TODO: JavaDoc
+    /*
+     * 
+     */
     private static final long TEILER = 10000;
 
     /**
@@ -26,22 +38,35 @@ public class Waehrung {
         this.kuerzel = kuerzel;
     }
 
-    // TODO: JavaDoc
+    /*
+     * Rechnet den Wert einer Währung in eine andere um
+     * 
+     * @param betrag Betrag der zu umrechnenden Waehrung
+     * @param toWaehrung Währung in die umgerechnet wird
+     * 
+     */
     public long umrechnen(long betrag, Waehrung toWaehrung) {
         return betrag * kurs / toWaehrung.kurs;
     }
 
-    // TODO: JavaDoc
+    /*
+     * Gibt den Wechselkurs der Währung zurück
+     *
+     */
     public int getKurs() {
         return kurs;
     }
     
-    // TODO: JavaDoc
+    /*
+     * Gibt Namen der Waehrung urück
+     */
     public String getName() {
         return name;
     }
 
-    // TODO: JavaDoc
+    /*
+     * Gibt K+rzel der Waehrubng zurück
+     */
     public String getKuerzel() {
         return kuerzel;
     }
