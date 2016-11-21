@@ -1,19 +1,21 @@
 package tpe.oo.vererbung;
 
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Point;
 
+
+
 import de.smits_net.games.framework.board.Board;
 import de.smits_net.games.framework.image.ImageBase;
 import de.smits_net.games.framework.sprite.Sprite;
-
 /**
  * Spielfeld.
  */
-public class GameBoard {
+public class GameBoard extends Board {
 // TODO: Von Board ableiten
 
     /** Alien, das durch das Bild läuft. */
@@ -29,15 +31,16 @@ public class GameBoard {
      * Erzeugt ein neues Board.
      */
     public GameBoard() {
-// TODO: Einkommentieren
-//        // neues Spielfeld anlegen
-//        super(10, new Dimension(800, 600), Color.BLACK);
-//
-//        // Hintergrundbild laden
-//        background = ImageBase.loadImage("assets/background");
-//
+        // neues Spielfeld anlegen
+        super(10, new Dimension(800, 600), Color.BLACK);
 
-        // TODO: Alien und Asteroid anlegen und positionieren
+        // Hintergrundbild laden
+        background = ImageBase.loadImage("assets/background");
+
+
+        alien = new AlienSprite(this,new Point (0,0) );
+        asteroid= new Asteroid(this, new Point(500,500));
+        
     }
 
     /**
@@ -54,6 +57,8 @@ public class GameBoard {
      */
     public void drawGame(Graphics g) {
         // TODO: Alle Objekte zeichnen
+    	alien.draw(g);
+    	asteroid.draw(g);
     }
 
     /**
@@ -65,12 +70,13 @@ public class GameBoard {
     public boolean updateGame() {
 
         // TODO: Die Objekte bewegen
-
+    	alien.move();
+    	asteroid.move();
         // Kollision erkennen
-// TODO: Einkommentieren
-//        if (alien.intersects(asteroid) && alien.isActive()) {
-//            alien.explode();
-//        }
+
+        if (alien.intersects(asteroid) && alien.isActive()) {
+            alien.explode();
+        }
 
         return true;
     }
