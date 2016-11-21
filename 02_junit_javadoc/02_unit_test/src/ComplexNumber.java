@@ -78,7 +78,7 @@ public class ComplexNumber {
      * @return das Ergebnis der Subtraktion
      */
     public ComplexNumber subtract(ComplexNumber other) {
-        return add(other.multiply(1));
+        return new ComplexNumber(this.realAnteil - other.realAnteil, this.imaginaerAnteil - other.imaginaerAnteil);
     }
 
     /**
@@ -190,7 +190,7 @@ public class ComplexNumber {
     public ComplexNumber power(int n) {
         ComplexNumber result = this;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i < n; i++) {
             result = result.multiply(this);
         }
 
