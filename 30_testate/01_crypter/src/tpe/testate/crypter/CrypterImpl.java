@@ -1,21 +1,22 @@
 package tpe.testate.crypter;
 
 public class CrypterImpl implements Crypter {
-/*
- * @autor Dario Capuana 1613518
- * 
- */
-	@Override
-	
+    /*
+     * @autor Dario Capuana 1613518
+     * 
+     */
+
 	/*
 	 * Methode verschluesselt gegebenen String
-	 * @param String input zu verschluesselnder Stringtest
+	 * @param String input zu verschluesselnder Stringtext
 	 */
+	@Override
 	public String encrypt(String input) throws IllegalArgumentException {
 		String cryptedText = "";
-		String text =input.toLowerCase();
-		char[] array = text.toCharArray();
+		//grossbuchstaben in kleinbuchstaben umwandeln und als char speichern
+		char[] array = (input.toLowerCase()).toCharArray();
 		for (int i = 0; i < array.length; i++) {
+			//ASCII Code benutzen um unerwuenschte Symbole auszusondern
 			if ((array[i] > 47 && array[i] < 58) || (array[i] > 96 && array[i] < 128) || array[i] == 32) {
 				switch (array[i]) {
 				case 'e': {
@@ -75,13 +76,13 @@ public class CrypterImpl implements Crypter {
 
 	@Override
 	/*
-	 * Methode entschlüsselt gegebenen String
+	 * Methode entschluesselt gegebenen String
 	 * @param String input ist der zu entschluesselnde Code
 	 * 
 	 */
 	public String decrypt(String input) throws IllegalArgumentException {
 		for (int i = 0; i < input.length(); i++) {
-			//Kontrolle auf Großbuchstaben
+			//Kontrolle auf Grossbuchstaben
 			if (Character.isUpperCase(input.charAt(i))) {
 				throw new IllegalArgumentException();
 			}
