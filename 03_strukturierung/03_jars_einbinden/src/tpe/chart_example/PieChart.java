@@ -33,10 +33,10 @@ public final class PieChart {
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         DefaultPieDataset dataset  = new DefaultPieDataset();
-        dataset.setValue("GTA V",10);
-        dataset.setValue("Witcher 3", 58);
-        dataset.setValue("Fallout 4", 30);
-        dataset.setValue("Diabolo", 2);
+        dataset.setValue("Overwatch",25);
+        dataset.setValue("Witcher 3", 25);
+        dataset.setValue("Halo", 40);
+        dataset.setValue("Dota 2", 10);
 
         JFreeChart chart = ChartFactory.createPieChart3D(
                 title,
