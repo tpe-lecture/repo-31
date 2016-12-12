@@ -10,7 +10,7 @@ public class CrypterImpl implements Crypter {
   /*
   * Methode verschluesselt gegebenen string
   * 
-  * @param String input zu verschluesselnder Stringtext
+  * @param String input zu verschluesselnder Text
   * @return String cryptedText verschluesselter Text
   * 
   * */
@@ -70,7 +70,7 @@ public class CrypterImpl implements Crypter {
    * @param String input ist der zu entschluesselnde Text
    * @return Gibt den entschluesselnten Text zurueck
    * @throw IllegalArgumentException
-   *          Wird ausgeworfen wenn Eingabe ungültige Zeichen enthaelt
+   *          Wird ausgeworfen wenn Eingabe ungÃ¼ltige Zeichen enthaelt
    *          
    */
   @Override
